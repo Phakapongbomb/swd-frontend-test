@@ -1,0 +1,25 @@
+{
+    "titleTest_3": "Form & Table",
+    "radioSelectAll": "Select All",
+    "btnDelet": "DELETE",
+    "btnNext": "NEXT",
+    "btnPrev": "PREV",
+    "btnEdit": "Edit",
+    "form": {
+        "title": "Title",
+        "firstName": "Firstname",
+        "LastName": "Lastname",
+        "birthday": "Birthday",
+        "nationality": "Nationality",
+        "citizenID": "CitizenID",
+        "gender": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "unisex": "Unisex",
+        "mobilePhone": "Mobile Phone",
+        "passport": "Passport No",
+        "expectedSalary": "Expected Salary",
+        "btnReset": "RESET",
+        "btnSubmit": "SUBMIT"
+    }
+}

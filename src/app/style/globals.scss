@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(-90deg,#FFA200,#6EDA78);
+    position: relative;
+}
+
+.container {
+    height: 100dvh;
+    display: flex;
+    .titlePage {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+    }
+}
+
+.btn {
+    position: absolute;
+    background-color: white;
+    padding: 12px;
+    height: auto;
+    width: 100%;
+    max-height: 46px;
+    max-width: 80px;
+    border-radius: 8px;
+    right: 24px;
+    text-align: center;
+    top: calc(24px + 46px + 12px);
+}

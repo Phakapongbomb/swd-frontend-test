@@ -1,0 +1,20 @@
+{
+    "card": [
+        {
+            "title": "Test 1",
+            "detail": "Layout & Style",
+            "link": "/test_1"
+        },
+        {
+            "title": "Test 2",
+            "detail": "Connect API",
+            "link": "/"
+        },
+        {
+            "title": "Test 3",
+            "detail": "Form & Table",
+            "link": "/test_3"
+        }
+    ],
+    "btnNavHome": "Home"
+}
