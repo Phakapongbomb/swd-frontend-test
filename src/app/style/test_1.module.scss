@@ -1,0 +1,50 @@
+.section {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .groupControl {
+        width: 100%;
+        height: 100%;
+        max-height: 200px;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .groupGeometry {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: center;
+        gap: 16px;
+        width: 100%;
+        max-width: 984px;
+
+        .card{
+            height: 120px;
+            width: 240px;
+        }
+
+        &.layout1 {
+            .card:nth-child(-n+3) {
+                transform: translateX(80px);
+            }
+        }
+
+        &.layout2 {
+            .card:nth-child(n+4) {
+                transform: translateX(80px);
+            }
+        }
+    }
+
+    hr {
+        height: 1px;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+}

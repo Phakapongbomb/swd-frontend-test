@@ -1,6 +1,7 @@
 import Btn from '@/component/btn'
 import TitlePage from '@/component/TitlePage'
 import React from 'react'
+import SectionCard from '@/component/test_1/SectionCard'
 
 export default function page() {
     return (
@@ -10,6 +11,7 @@ export default function page() {
                 text='btnNavHome'
                 link='/'
             />
+            <SectionCard/>
         </div>
     )
 }
