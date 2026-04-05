@@ -5,7 +5,7 @@ import SectionForm from '@/component/test_3/SectionForm'
 
 export default function page() {
     return (
-        <div className='container'>
+        <div className='container unlock'>
             <TitlePage value='test_3:titleTest_3'/>
             <Btn
                 text='btnNavHome'

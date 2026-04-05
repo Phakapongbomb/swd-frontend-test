@@ -240,7 +240,7 @@ export default function SectionForm() {
                 </Flex>
             </form>
 
-            <Col style={{ width: '100%', maxWidth: '1280px', gap: '16px', marginTop: '24px', padding: '0 20px' }}>
+            <Col style={{ width: '100%', maxWidth: '1280px', gap: '16px', marginTop: '24px', padding: '0 20px 40px' }}>
                 <Flex style={{ width: '100%', gap: '16px' }}>
                     <Flex style={{ alignItems: 'center', gap: '8px' }}>
                         <Checkbox
