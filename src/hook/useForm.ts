@@ -56,7 +56,7 @@ export const useUserForm = () => {
         dispatch(inputForm({ name, value: currentArray }));
     };
 
-    const handleAntdChange = (name: string, value: any) => {
+    const handleAntdChange = (name: string, value: string | string[]) => {
         dispatch(inputForm({ name, value }));
     };
 
