@@ -1,0 +1,39 @@
+.group {
+    align-items: center;
+    margin-right: 8px;
+    height: 100%;
+    
+    .title {
+        flex-shrink: 0;
+        margin-right: 4px;
+    }
+    
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        
+        padding: 4px 11px;
+        background-color: white;
+        border-radius: 8px;
+        
+        width: 100%;
+        min-width: 80px;
+        
+        font-size: 14px;
+        cursor: pointer;
+        
+        .value {
+            flex-grow: 1;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: gray;
+
+            &.active {
+                color: black;
+            }
+        }
+    }
+}

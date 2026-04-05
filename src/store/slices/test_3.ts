@@ -2,10 +2,9 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface UserDetail {
     [key: string]: string | number | string[] | null | undefined;
-    index: number | null
     title: string
     firstName: string
-    LastName: string
+    lastName: string
     birthday: string
     nationality: string
     citizenID?: string[]
@@ -22,22 +21,24 @@ interface StateTest_3 {
     currentPage: number
     pageSize: number
     selectedIndex: number[]
+    touched: Record<string, boolean>;
+    typeSubmit: 'submit' | 'edit'
+    indexEdit: number | null
 }
 
 interface FormValue {
-    value: string
+    value: string | string[]
     name: string
 }
 
 const initialState: StateTest_3 = {
     form: {
-        index: null,
         title: '',
         firstName: '',
-        LastName: '',
+        lastName: '',
         birthday: '',
         nationality: '',
-        citizenID: [],
+        citizenID: ['', '', '', '', ''],
         gender: '',
         mobilePhone: '',
         mobilePhoneCountry: '',
@@ -47,7 +48,10 @@ const initialState: StateTest_3 = {
     listData: [],
     currentPage: 1,
     pageSize: 10,
-    selectedIndex: []
+    selectedIndex: [],
+    touched: {},
+    indexEdit: null,
+    typeSubmit: 'submit'
 };
 
 export const StateTest_3 = createSlice({
@@ -64,11 +68,21 @@ export const StateTest_3 = createSlice({
             form[key] = value
         },
         submitAction: (state, action: PayloadAction<UserDetail>) => {
-            const data = action.payload
-            state.listData.push(data)
+            if (state.typeSubmit === 'edit') {
+                const data = action.payload
+                const indexEdit = state.indexEdit as number
+                state.listData[indexEdit] = data
+                state.typeSubmit = 'submit'
+            } else {
+                const data = action.payload
+                state.listData.push(data)
+            }
         },
         resetAction: (state) => {
             state.form = initialState.form
+            state.indexEdit = initialState.indexEdit
+            state.typeSubmit = initialState.typeSubmit
+            state.touched = {};
         },
         deleteAction: (state, action: PayloadAction<number | number[]>) => {
             const indexDelete = action.payload
@@ -78,10 +92,20 @@ export const StateTest_3 = createSlice({
                 state.listData = state.listData.filter((_, index) => indexDelete !== index)
             }
             state.selectedIndex = []
+
+            const maxPages = Math.ceil(state.listData.length / state.pageSize) || 1;
+            if (state.currentPage > maxPages) {
+                state.currentPage = maxPages;
+            }
         },
-        loadDataStorage: (state, action: PayloadAction<[]>) => {
-            const data = action.payload
-            state.listData = data
+        loadDataStorage: (state, action: PayloadAction<UserDetail[]>) => {
+            const data = action.payload;
+            state.listData = data;
+
+            const maxPages = Math.ceil(data.length / state.pageSize) || 1;
+            if (state.currentPage > maxPages) {
+                state.currentPage = maxPages;
+            }
         },
         setPage: (state, action: PayloadAction<number>) => {
             state.currentPage = action.payload
@@ -100,18 +124,29 @@ export const StateTest_3 = createSlice({
             } else {
                 state.selectedIndex.push(index)
             }
+        },
+        setFieldTouched: (state, action: PayloadAction<string>) => {
+            state.touched[action.payload] = true;
+        },
+        editData: (state, action: PayloadAction<number>) => {
+            const index = action.payload
+            state.typeSubmit = 'edit'
+            state.indexEdit = index
+            state.form = state.listData[index]
         }
     },
 });
 
-export const { 
-    inputForm, 
-    submitAction, 
-    resetAction, 
-    deleteAction, 
-    loadDataStorage, 
-    setPage, 
+export const {
+    inputForm,
+    submitAction,
+    resetAction,
+    deleteAction,
+    loadDataStorage,
+    setPage,
     selectAll,
-    selectItem
+    selectItem,
+    setFieldTouched,
+    editData
 } = StateTest_3.actions;
 export default StateTest_3.reducer;

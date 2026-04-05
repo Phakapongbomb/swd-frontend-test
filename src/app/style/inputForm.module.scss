@@ -1,0 +1,12 @@
+.group {
+    align-items: center;
+    margin-right: 16px;
+    position: relative;
+    .title {
+        flex-shrink: 0;
+        margin-right: 4px;
+        &.space{
+            margin-right: 16px;
+        }
+    }
+}

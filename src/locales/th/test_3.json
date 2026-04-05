@@ -5,10 +5,11 @@
     "btnNext": "ถัดไป",
     "btnPrev": "ก่อนหน้า",
     "btnEdit": "แก้ไขข้อมูล",
+    "plsInput": "กรุณากรอก",
     "form": {
         "title": "คำนำหน้า",
         "firstName": "ชื่อจริง",
-        "LastName": "นามสกุล",
+        "lastName": "นามสกุล",
         "birthday": "วันเกิด",
         "nationality": "สัญชาติ",
         "citizenID": "เลขบัตรประชาชน",
@@ -20,6 +21,24 @@
         "passport": "หนังสือเดินทาง",
         "expectedSalary": "เงินเดือนที่คาดหวัง",
         "btnReset": "ล้างข้อมูล",
-        "btnSubmit": "ส่งข้อมูล"
+        "btnSubmit": "ส่งข้อมูล",
+        "placehoderNationality": "-- กรุณาเลือก --"
+    },
+    "titleName" : {
+        "mr": "นาย",
+        "mrs": "นางสาว",
+        "ms": "นาง"
+    },
+    "nationalityList": {
+        "th": "ไทย",
+        "fr": "ฝรั่งเศส",
+        "us": "อเมริกา"
+    },
+    "table": {
+        "name": "ชื่อ",
+        "gender": "เพศ",
+        "mobilePhone": "หมายเลขโทรศัพท์มือถือ",
+        "nationality": "สัญชาติ",
+        "manage": "จัดการ"
     }
 }

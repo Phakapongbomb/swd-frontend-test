@@ -5,10 +5,11 @@
     "btnNext": "NEXT",
     "btnPrev": "PREV",
     "btnEdit": "Edit",
+    "plsInput": "Please input your",
     "form": {
         "title": "Title",
         "firstName": "Firstname",
-        "LastName": "Lastname",
+        "lastName": "Lastname",
         "birthday": "Birthday",
         "nationality": "Nationality",
         "citizenID": "CitizenID",
@@ -20,6 +21,24 @@
         "passport": "Passport No",
         "expectedSalary": "Expected Salary",
         "btnReset": "RESET",
-        "btnSubmit": "SUBMIT"
+        "btnSubmit": "SUBMIT",
+        "placehoderNationality": "-- Please Select --"
+    },
+    "titleName" : {
+        "mr": "Mr",
+        "mrs": "Mrs",
+        "ms": "Ms"
+    },
+    "nationalityList": {
+        "th": "Thai",
+        "fr": "France",
+        "us": "America"
+    },
+    "table": {
+        "name": "Name",
+        "gender": "Gender",
+        "mobilePhone": "Mobile Phone",
+        "nationality": "Nationality",
+        "manage": "MANAGE"
     }
 }
