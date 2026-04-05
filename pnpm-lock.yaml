@@ -11,6 +11,9 @@ importers:
       '@ant-design/icons':
         specifier: ^6.1.1
         version: 6.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@ant-design/nextjs-registry':
+        specifier: ^1.3.0
+        version: 1.3.0(@ant-design/cssinjs@1.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(antd@5.29.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.99.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@reduxjs/toolkit':
         specifier: ^2.11.2
         version: 2.11.2(react-redux@9.2.0(@types/react@18.3.7)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
@@ -103,6 +106,15 @@ packages:
     resolution: {integrity: sha512-AMT4N2y++TZETNHiM77fs4a0uPVCJGuL5MTonk13Pvv7UN7sID1cNEZOc1qNqx6zLKAOilTEFAdAoAFKa0U//Q==}
     engines: {node: '>=8'}
     peerDependencies:
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+
+  '@ant-design/nextjs-registry@1.3.0':
+    resolution: {integrity: sha512-lHlg5bnj3LPYHUD+iZsO1k11NhIrx1mLWh2DXQ0m3Ly3OSaYfgeHX0WoVXxdVjEGjjYnPTe+OUY7YvU/p1aPZw==}
+    peerDependencies:
+      '@ant-design/cssinjs': '>=1.0.0'
+      antd: '>=5.0.0'
+      next: '>=14.0.0'
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
 
@@ -2015,6 +2027,14 @@ snapshots:
       '@ant-design/icons-svg': 4.4.2
       '@rc-component/util': 1.10.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@ant-design/nextjs-registry@1.3.0(@ant-design/cssinjs@1.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(antd@5.29.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(next@14.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.99.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@ant-design/cssinjs': 1.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      antd: 5.29.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next: 14.2.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.99.0)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 

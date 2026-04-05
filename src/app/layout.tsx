@@ -4,6 +4,7 @@ import './style/globals.scss';
 import DropdownLang from "@/component/DropdownLang";
 import I18NProvider from '@/component/I18nProvider';
 import StoreProvider from "@/store/StoreProvider";
+import { AntdRegistry } from "@ant-design/nextjs-registry";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,12 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <StoreProvider>
-          <I18NProvider>
-            <DropdownLang/>
-            {children}
-          </I18NProvider>
-        </StoreProvider>
+        <AntdRegistry>
+          <StoreProvider>
+            <I18NProvider>
+              <DropdownLang/>
+              {children}
+            </I18NProvider>
+          </StoreProvider>
+        </AntdRegistry>
       </body>
     </html>
   );
