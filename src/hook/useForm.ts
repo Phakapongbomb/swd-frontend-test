@@ -12,9 +12,12 @@ import {
     setFieldTouched,
     editData
 } from '@/store/slices/test_3';
+import { useTranslation } from 'react-i18next';
+import { message } from 'antd';
 
 export const useUserForm = () => {
     const dispatch = useAppDispatch();
+    const { t } = useTranslation('test_3')
 
     const { form, touched, listData, currentPage, pageSize, selectedIndex } = useAppSelector(state => state.test_3);
 
@@ -86,13 +89,15 @@ export const useUserForm = () => {
         });
 
         if (!isValid) {
-            alert('กรุณากรอกข้อมูลที่จำเป็นให้ครบถ้วน');
+            alert(t('alertRequire'));
+            // message.error(t('alertRequire'));
             return;
         }
 
         dispatch(submitAction(form));
         dispatch(resetAction());
-        alert('Save Success');
+        alert(t('alertSuccess'));
+        // message.success(t('alertSuccess'));
     };
 
     const handleBulkDelete = () => {

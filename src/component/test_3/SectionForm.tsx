@@ -73,7 +73,7 @@ export default function SectionForm() {
     return (
         <Flex className={st.box}>
             <form onSubmit={handleSubmit}>
-                <Flex>
+                <Flex style={{gap: '8px'}}>
                     <DropdownInput
                         items={listTitle}
                         value={form.title}
@@ -104,7 +104,7 @@ export default function SectionForm() {
                         onBlur={handleFieldBlur}
                     />
                 </Flex>
-                <Flex>
+                <Flex style={{gap: '8px'}}>
                     <DatePickerInput
                         title={t('form.birthday')}
                         name={'birthday'}
@@ -206,7 +206,7 @@ export default function SectionForm() {
                         maxLength={10}
                     />
                 </Flex>
-                <Flex>
+                <Flex style={{gap: '8px'}}>
                     <InputForm
                         title={t('form.passport')}
                         name={'passport'}
@@ -215,7 +215,7 @@ export default function SectionForm() {
                         maxLength={20}
                     />
                 </Flex>
-                <Flex>
+                <Flex style={{gap: '8px'}}>
                     <InputForm
                         title={t('form.expectedSalary')}
                         name={'expectedSalary'}

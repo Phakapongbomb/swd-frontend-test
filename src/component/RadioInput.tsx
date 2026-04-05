@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex, Radio } from 'antd';
 import type { RadioChangeEvent } from 'antd';
 import st from '@/app/style/inputForm.module.scss';
+import { useTranslation } from 'react-i18next';
 
 interface RadioInputProps {
     name: string;
@@ -24,6 +25,8 @@ export default function RadioInput({
     isTouched = false,
     onBlur
 }: RadioInputProps) {
+
+    const {t} = useTranslation('test_3')
 
     const isError = isRequired && isTouched && !valueData;
 
@@ -56,7 +59,7 @@ export default function RadioInput({
 
                 {isError && (
                     <div style={{ color: '#ff4d4f', fontSize: '12px' }}>
-                        Please select your {title || name}
+                        {`${t('plsInput')} ${title}`}
                     </div>
                 )}
             </div>

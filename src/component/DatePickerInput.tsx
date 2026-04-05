@@ -28,8 +28,8 @@ export default function DatePickerInput({
     const isError = isRequired && isTouched && !valueData;
 
     return (
-        <Flex className={st.group} style={{ alignItems: 'flex-start' }}>
-            <div className={`${st.title} ${title === '' ? st.space : ''}`} style={{ marginTop: '5px' }}>
+        <Flex className={st.group} style={{ alignItems: 'center' }}>
+            <div className={`${st.title} ${title === '' ? st.space : ''}`}>
                 {isRequired && title !== '' && (
                     <span style={{ color: '#ff4d4f', marginRight: '4px' }}>*</span>
                 )}

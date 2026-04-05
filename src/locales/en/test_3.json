@@ -6,6 +6,8 @@
     "btnPrev": "PREV",
     "btnEdit": "Edit",
     "plsInput": "Please input your",
+    "alertRequire": "Please fill in all required fields.",
+    "alertSuccess": "Save Success!",
     "form": {
         "title": "Title",
         "firstName": "Firstname",

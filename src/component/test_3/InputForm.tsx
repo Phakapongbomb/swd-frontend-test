@@ -44,7 +44,7 @@ export default function InputForm({
     return (
 
         <Flex className={st.group}>
-            <div className={`${st.title} ${title === '' ? st.space : ''}`} style={{ marginTop: '5px' }}>
+            <div className={`${st.title} ${title === '' ? st.space : ''}`}>
                 {isRequired && title !== '' && (
                     <span style={{ color: '#ff4d4f', marginRight: '4px' }}>*</span>
                 )}
